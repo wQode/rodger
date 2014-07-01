@@ -1,9 +1,11 @@
+<h2>Documents</h2>
 <div class="documents_index">
 <% @documents.each do |document| %>
 	<div id="documents_index_inner">
-			<h3>title: <%= link_to(document.title, document_path(document)) if document.title %></h3>
-			<p>classification: <%= link_to(document.classification.title, classification_path(document)) if document.classification %></p>	
-			<p><%= document.content if document.content %></p>	
+		<h3><%= link_to(document.title, document_path(document)) if document.title %></h3>
+		<p>of <%= link_to(document.classification.title, classification_path(document)) if document.classification %></p>	
+		<p> - <%= document.content if document.content %></p>	
+<!-- 		<p>revisions: <%#= link_to(document.revision, revision_path) if document.revision %></p>	 -->
 			
 	</div><!-- documents_index_inner -->
 <% end %>

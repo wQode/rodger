@@ -7,8 +7,9 @@
 	border: 2px solid;
 }
 .notice {
-	border: 3px dashed black;
-	background-color: yellow;
+	border: 1px dashed black;
+	background-color: white;
+	color:brown
 }
 #container {
 	/*max-width: 960px;*/
@@ -67,6 +68,7 @@ body {
   	text-align: center;
 }
 .users_index, .documents_index, .documents_show, .users_show {
+	margin-top: 12px;
 	display: block;
 	text-align: center;
 	/*background: #737373;*/
@@ -78,10 +80,27 @@ body {
 #documents_show_menu{
 	display:inline;
 }
+#document_content {
+	display: block;
+	color: #6E7B8B;
+	background-color: transparent;
+	margin: 0 auto;
+	border-radius: 20px;
+	width: 420px;
+	height: 100px;
+	text-align: center;
+	overflow:visible;	
+}
 #users_index_inner, #documents_index_inner {
 	 display: inline-block;
-	 width: 30%;
+	 /*width: 30%;*/
 	 font-size: 10px;
+	 padding: 8px;
+}
+#users_index_inner p:last-child, #documents_index_inner p:last-child{
+/*	width: 10px;
+	overflow: hidden;*/
+
 }
 #users_index_inner a, #documents_index_inner a:link, 
 #users_index_inner a, #documents_index_inner a:visited {
@@ -90,6 +109,7 @@ body {
 	text-decoration: none;
 	/*font-weight: 900;*/
 	font-size: 10px;
+
 }
 #users_index_inner a, #documents_index_inner a:hover {
 	color:#FFF8DC;
@@ -105,12 +125,20 @@ body {
 	color:#FFFFE0;
 	text-decoration: none;
 	font-size: 14px;
+	display:inline-block;
+	width:100%;
 } 
 #classifications_index_inner a:hover {
 	color:#FFF8DC;
 	text-decoration: none;
 	font-size: 14px;
 	box-shadow: none;
+}
+
+.classifications_index {
+	display:inline-block;
+	text-align: center;
+	margin: 0 auto;
 }
 .form {
 	margin:25px auto;
@@ -160,6 +188,7 @@ h1{
 	color: white;
 }
 h2 {
+	padding: 6px;
 	margin: 0 auto;
 	display:inline;
 	text-align: center;
@@ -184,17 +213,6 @@ h3, h4 {
 	text-decoration: underline;
 	font-size: 10px;
 }
-#document_content {
-	display: block;
-	color: #6E7B8B;
-	background-color: transparent;
-	margin: 0 auto;
-	border-radius: 20px;
-	width: 420px;
-	height: 100px;
-	text-align: center;
-	overflow:visible;	
-}
 li {
 	list-style-type: none;
 	text-align: center;
@@ -202,6 +220,7 @@ li {
 	margin: 0 auto;
 	font-size: 12px;
 }
+
 label {
 	display: center;
 	font-size: 12px;
@@ -228,6 +247,7 @@ a {
 	color:white;
 	font-size: 8px;
 	text-align: center;
+	display: inline-block;
 }
 a:link, a:visited {
 	/*color:#EEEED1;*/
@@ -236,6 +256,7 @@ a:link, a:visited {
 	font-weight: 900;
 	font-size: 14px;
 	text-align: center;
+	display:inline-block;
 }
 a:hover {
 	color:#FFF8DC;
@@ -245,6 +266,7 @@ a:hover {
 	opacity: 0.8;
 	box-shadow: 1px 4px 4px #8B8B83;
 	text-align: center;
+	display:inline-block;
 } 
 #bottom_border a:link, 
 #bottom_border a:hover,
