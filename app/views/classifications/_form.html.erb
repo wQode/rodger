@@ -1,0 +1,9 @@
+<div class="classification_form">
+	<%= form_for @classification do |f| %>
+		<p>
+			<%= f.label :title, "classification title" %>
+			<%= f.text_field :title, :autocomplete => 'off', :placeholder => 'Classification name is..', :autofocus => true %>
+		</p>
+		<%= f.submit 'Save' %>
+	<% end %>
+</div>

@@ -1,0 +1,23 @@
+<body id="documents_background">
+<div class="doc_form">
+	<%= form_for @document do |f| %>
+		<p>
+			<%= f.label :title, "document title" %>
+			<%= f.text_field :title, :autocomplete => 'off', :placeholder => 'Document title is..', :autofocus => true %>
+		</p>
+		<p>
+		<%= f.label :classification_id, "classification" %>
+		<%= f.select :classification_id, Classification.all.map{ |classification| [classification.title, classification.id] }, :inlcude_blank => true %>
+		</p>
+		<div id="input_content">
+			<p>
+				<%= f.label :content, "document content" %>
+				<%= f.text_field :content %>
+			</p>
+		</div>
+		
+		
+		<%= f.submit 'Submit' %>
+	<% end %>
+</div>
+</body>

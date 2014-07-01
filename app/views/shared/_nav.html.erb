@@ -1,0 +1,12 @@
+<ul>
+	<li><%= link_to('view users', users_path) -%></li>
+	<li><%= link_to('new', new_document_path) -%></li>
+	<li><%= link_to('index', documents_path) %></li>
+	<li><%= link_to('classifications', classifications_path) %></li>
+	<li><%= link_to('Sign up', new_user_path)%></li>
+	<li><%= link_to('Sign in', login_path) %></li>
+
+	<% if @current_user %>
+	<li><%= link_to('Logout ' + @current_user.username, login_path, :data => {:method => :delete, :confirm => 'Really logout?'}) %></li>
+	<% end %>
+</ul>

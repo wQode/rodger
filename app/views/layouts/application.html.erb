@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>rodger</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+</head>
+<div id="top_border">
+	<nav id="homepage_login_nav">
+<!-- 		<%#=#= login_nav %> -->
+	</nav>
+</div>
+
+<body id="background">
+	<div id="container">
+		<% if flash[:notice].present? %>
+			<div class="notice">
+				<%= flash[:notice]%>
+			</div> 
+		<% end %>
+
+		<%= yield %>
+
+	</div><!-- container -->
+</body>
+
+<div id="bottom_border">
+	<div id="homepage_logout_nav">	
+		<nav>
+		<%= render :partial => "/shared/nav"  %>
+
+<!-- 				<%#=#= logout_nav %> -->
+
+
+		</nav>
+	</div><!-- hpmepage_logout_nav -->
+</div><!-- bottom_border -->
+
+
+</html>

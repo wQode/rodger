@@ -1,0 +1,10 @@
+<div class="documents_index">
+<% @documents.each do |document| %>
+	<div id="documents_index_inner">
+			<h3>title: <%= link_to(document.title, document_path(document)) if document.title %></h3>
+			<p>classification: <%= link_to(document.classification.title, classification_path(document)) if document.classification %></p>	
+			<p><%= document.content if document.content %></p>	
+			
+	</div><!-- documents_index_inner -->
+<% end %>
+</div><!-- documents_index -->

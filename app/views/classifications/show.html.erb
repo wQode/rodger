@@ -1,0 +1,23 @@
+<div id="classifications_show">
+	<h3>Classifications</h3>	
+		<li><%= @classification.title %></li>
+	
+	<li><%= link_to('edit', edit_classification_path(@classification)) %></li>
+	<li><%= link_to('remove', @classification, :data => {:confirm => 'are you sure?', :method => :delete }) %></li>
+</div>
+
+
+<div id="classifications_show_documents">
+	<h4>Documents under the <%= @classification.title %> classification.</h4>
+		<ul>
+		<% @classification.documents.each do |document| %>
+			<li><%= link_to(document.title, document) %></li>
+		<% end %>
+		</ul>
+
+<!-- 	<span><%#= link_to('Edit', edit_classification_path(@classification)) %></span>
+	<span><%#= link_to('Delete', @classification, :method => :delete,
+	:confirm => 'Are you sure you want to delete this classification?',
+	:class => '#') %></span> -->
+</div>
+

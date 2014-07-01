@@ -1,0 +1,19 @@
+<%= form_for @user do |f| %>
+	<p>
+		<%= f.label :username %>
+		<%= f.text_field :username, :autofocus => true %>
+	</p>
+<!-- 	<p>
+		<%#= f.label :avatar %>
+		<%#= f.url_field :avatar if user.avatar %>
+	</p> -->
+	<p>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</p>
+	<p>
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	</p>
+	<%= f.submit 'Submit' %>
+<% end %>

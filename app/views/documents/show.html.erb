@@ -1,0 +1,22 @@
+<div class="documents_show">
+	<% @users.each do |user| %>
+		<% user.documents.each do |document| %>
+			<p><%= link_to(document.title) if document %></p>
+			<p>classification :<%= link_to(document.classification.title) if document.classification %></p>
+			<p>content :<%= document.content if document %></p>
+			<p>user: <%= link_to(user.username) if user %></p>
+
+		<p> • <%= link_to('edit', edit_document_path(document)) %> • </p>	
+		<p><%= link_to('remove', document, :data => {:confirm => 'are you sure?', :method => :delete }) %> • </p>
+		<% end %>
+	<% end %>
+</div>
+
+
+<!-- 	<h2><%#= document.title %></h2>
+	<%# @users.documents.each do |document| %>users
+	<p>user: <%#= link_to(@document.users.username) if @document.users %></p>
+	<p>classification :<%#= link_to(@document.classification.title) if @document.classification %></p>
+	<p>content :<%#= @document.content if @document.content %></p> -->
+
+

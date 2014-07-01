@@ -1,0 +1,13 @@
+<div class="users_show">
+	<p><%= @user.username %></p>
+	<p><%= image_tag(@user.avatar, :class => 'medium') if @user.avatar %></p>
+	<p><%= @user.email if @user.email %></li>
+</div><!-- users_show -->
+
+<% @user.documents.each do |document| %>
+<div class="user_show_documents">
+	<p><%= link_to(document.title, document) %></p>
+	<p><%= link_to(document.classification, document) %></p>
+<% end %>
+</div><!-- user_show_documents_div -->
+

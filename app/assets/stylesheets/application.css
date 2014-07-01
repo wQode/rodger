@@ -1,0 +1,265 @@
+.thumb {
+	max-width: 8em;
+	border: 2px solid;
+}
+.medium {
+	max-width: 12em;
+	border: 2px solid;
+}
+.notice {
+	border: 3px dashed black;
+	background-color: yellow;
+}
+#container {
+	/*max-width: 960px;*/
+	max-width:1100px;
+	margin: 80px auto;
+	display:block;
+	text-align: center;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Bitter', serif;*/
+	/*font-family: 'Lato', sans-serif;*/
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Bitter', serif;*/
+	/*font-family: 'Lato', sans-serif;*/
+	background-color: #9FB6CD;
+	margin:0 auto;
+	text-align: center;
+}
+#bottom_border {
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Bitter', serif;*/
+	/*font-family: 'Lato', sans-serif;*/
+	text-align: center;
+	left: 0; right: 0; bottom: 0;
+	height: 70px;
+	position: fixed;
+	background-color: #171717;
+	/*background-color: rgba(0, 0, 0, 1);*/
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+	}
+#top_border {
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Bitter', serif;*/
+	/*font-family: 'Lato', sans-serif;*/
+	left: 0; right: 0; top:0;
+	height: 60px;
+	position: fixed;
+	/*background-color: rgba(0, 0, 0, 1);*/
+	background-color: #171717;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+	}
+#homepage_logout_nav, #homepage_login_nav {
+	color: white;
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding: 15px;
+/*	margin-left: 350px;
+	margin-right: 350px;
+	margin-top: 10px;*/
+}
+#homepage_logout_nav a, #homepage_login_nav a{
+	display: inline;
+  	text-align: center;
+}
+.users_index, .documents_index, .documents_show, .users_show {
+	display: inline-block;
+	text-align: center;
+	/*background: #737373;*/
+	border: 2px solid;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+}
+#users_index_inner, #documents_index_inner {
+	 display: inline-block;
+	 width: 30%;
+	 font-size: 10px;
+}
+#users_index_inner a, #documents_index_inner a:link, 
+#users_index_inner a, #documents_index_inner a:visited {
+	/*color:#EEEED1;*/
+	color:#FFFFE0;
+	text-decoration: none;
+	/*font-weight: 900;*/
+	font-size: 10px;
+}
+#users_index_inner a, #documents_index_inner a:hover {
+	color:#FFF8DC;
+	text-decoration: none;
+	font-size: 12px;
+	/*border-radius: 15px;*/
+	/*opacity: 0.8;*/
+	box-shadow: none;
+}
+#classifications_index_inner a, 
+#classifications_index_inner a:link, 
+#classifications_index_inner a:visited {
+	color:#FFFFE0;
+	text-decoration: none;
+	font-size: 14px;
+} 
+#classifications_index_inner a:hover {
+	color:#FFF8DC;
+	text-decoration: none;
+	font-size: 14px;
+	box-shadow: none;
+}
+.form {
+	margin:25px auto;
+	border:0 solid;
+	border-spacing: 2px;
+	width: 240px;
+	padding:5px;
+	border-radius: 15px;
+	background-color: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+}
+#classifications_show a{
+	font-size: 8px;
+}
+#form {
+	margin-bottom:20px;
+}
+#login_background {
+	background: url(/assets/rodger_mainpage.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg', sizingMethod='scale');
+}
+#documents_background {
+	/*background: url(/assets/rodger_mainpage.jpg) no-repeat center center fixed;*/
+    background: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg', sizingMethod='scale');
+}
+h1{
+	display:block;
+	text-align: center;
+	font-size: 24px;
+	padding-top: 2px;
+/*	margin-top: 8px;
+	margin-bottom: 5px;
+	padding-bottom: 2px;
+	margin-left: auto;
+	margin-right: auto;*/
+	color: white;
+}
+h2 {
+	margin: 0 auto;
+	display:inline;
+	text-align: center;
+	font-weight: 900;
+	border:0 solid;
+	width: 55px;
+	border-radius: 12px;
+	background-color: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+}	
+input {
+	display: block;
+	color: #6E7B8B;
+	background-color: transparent;
+	margin: 0 auto;
+	border-radius: 20px;
+	width: 360px;
+	height: 18px;
+	text-align: center;
+}
+h3, h4 {
+	text-decoration: underline;
+}
+#document_content {
+	display: block;
+	color: #6E7B8B;
+	background-color: transparent;
+	margin: 0 auto;
+	border-radius: 20px;
+	width: 420px;
+	height: 100px;
+	text-align: center;
+	overflow:visible;	
+}
+li {
+	list-style-type: none;
+	text-align: center;
+	display: inline-block;
+	margin: 0 auto;
+	font-size: 12px;
+}
+label {
+	display: center;
+	font-size: 12px;
+	font-weight: 900;
+	/*color: black;*/
+	color:white;
+	margin:0 auto;
+	border:0 solid;
+	width: 55px;
+	border-radius: 12px;
+	background-color: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+}
+button {
+	margin-top: 12px;
+	display: block;
+	margin: 0 auto;
+	background-color: #CAE1FF;
+	width: 120px;
+	text-align: center;
+}
+a {
+	/*color:#EEE9E9;*/
+	color:white;
+	font-size: 8px;
+	text-align: center;
+}
+a:link, a:visited {
+	/*color:#EEEED1;*/
+	color:#FFFFE0;
+	text-decoration: none;
+	font-weight: 900;
+	font-size: 14px;
+	text-align: center;
+}
+a:hover {
+	color:#FFF8DC;
+	text-decoration: none;
+	font-size: 12px;
+	border-radius: 15px;
+	opacity: 0.8;
+	box-shadow: 1px 4px 4px #8B8B83;
+	text-align: center;
+} 
+#bottom_border a:link, 
+#bottom_border a:hover,
+#bottom_border a:visited {
+	color:white;
+	font-weight:900;
+	font-size: 24px;
+	text-decoration: none;
+	text-align: center;
+}
+#bottom_border a:hover {
+	font-size: 18px;
+	border-radius: 15px;
+	opacity: 0.8;
+	box-shadow: 1px 4px 4px #8B8B83;
+	text-align: center;
+} 
+span.navigationSpace {
+    padding-left: 12px;
+}
+/*<span class="navigationSpace"/>*/
+
