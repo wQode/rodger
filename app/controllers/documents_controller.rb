@@ -5,25 +5,13 @@ class DocumentsController < ApplicationController
 	end
 
 	def create
-		if @current_user.nil?
-			@document = Document.create document_params
-		else
 			@document = Document.new document_params
 			#Add document to current user  * has_and_belongs to many relationship
 			@document.users << @current_user
-
 			# @document.user = @current_user
 			@document.save
 			
 			redirect_to @document
-		end
-
-		if @document.valid? 
-			redirect_to @document
-		else
-			flash[:notice] = "Needs good title, try again"
-			render :new
-		end
 	end
 
 	def new
@@ -41,9 +29,16 @@ class DocumentsController < ApplicationController
 
 	def update
 		document = Document.find params[:id]
-		#Create a revision if the user is signed in
-		@rev = Revision.create document_params
+		revision = Revision.new
 
+		revision.document_id = document.id
+		# revision.classification_id = document.classification_id
+		Revision.new(document.attributes.slice('title', 'content', 'classification_id'))
+		# revision.title = document.title
+		# revision.content = document.content
+		revision.save
+		flash[:notice] = 'Revision created'	
+		
 		document.update document_params
 		redirect_to document
 	end

@@ -11,7 +11,8 @@
 </head>
 <div id="top_border">
 	<nav id="homepage_login_nav">
-<!-- 		<%#=#= login_nav %> -->
+		<%= render :partial => "/shared/nav_top"  %>
+		<%= render :partial => "/shared/nav"  %>
 	</nav>
 </div>
 
@@ -31,11 +32,7 @@
 <div id="bottom_border">
 	<div id="homepage_logout_nav">	
 		<nav>
-		<%= render :partial => "/shared/nav"  %>
-
-<!-- 				<%#=#= logout_nav %> -->
-
-
+		<%= render :partial => "/shared/nav_bottom"  %>
 		</nav>
 	</div><!-- hpmepage_logout_nav -->
 </div><!-- bottom_border -->
