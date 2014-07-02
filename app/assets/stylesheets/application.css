@@ -79,6 +79,8 @@ body {
 }
 #documents_show_menu{
 	display:inline;
+	text-align: center;
+	margin: 0 auto;
 }
 #document_content {
 	display: block;
@@ -88,8 +90,8 @@ body {
 	border-radius: 20px;
 	width: 420px;
 	height: 100px;
-	text-align: center;
-	overflow:visible;	
+	text-align: justify;
+	/*overflow:visible;	*/
 }
 #users_index_inner, #documents_index_inner {
 	 display: inline-block;
@@ -97,9 +99,14 @@ body {
 	 font-size: 10px;
 	 padding: 8px;
 }
+#users_index_inner, #documents_index_inner {
+	overflow: auto;
+}
 #users_index_inner p:last-child, #documents_index_inner p:last-child{
 /*	width: 10px;
 	overflow: hidden;*/
+/*	overflow:auto;*/
+	text-overflow: ellipsis-word;
 
 }
 #users_index_inner a, #documents_index_inner a:link, 
@@ -156,8 +163,8 @@ body {
 #form {
 	margin-bottom:20px;
 }
-#login_background {
-	background: url(/assets/rodger_mainpage.jpg) no-repeat center center fixed;
+#background {
+	background: url(rodger_mainpage.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -209,9 +216,14 @@ input {
 	height: 18px;
 	text-align: center;
 }
+textarea {
+        text-align: justify;
+        white-space: normal;
+}
 h3, h4 {
 	text-decoration: underline;
 	font-size: 10px;
+	border: 0.2px solid white;
 }
 li {
 	list-style-type: none;
@@ -288,4 +300,5 @@ span.navigationSpace {
     padding-left: 12px;
 }
 /*<span class="navigationSpace"/>*/
+
 

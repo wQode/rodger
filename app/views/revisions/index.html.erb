@@ -1,11 +1,8 @@
-
 <h3>Revisions</h3>
 <div class="revisions_index">
-<% @documents.each do |revision| %>
+<% @revisions.each do |revision| %>
 	<div id="revisions_index_inner">
-		<h3>title: <%= link_to(revision.title, revision_path) if revision %></h3>
-		<p>revisions: <%= link_to(revision.content, revision_path) if revision %></p>	
-			
+		<p>title: <%= link_to(revision.title || '', revision) if revision %></p>			
 	</div><!-- revisions_index_inner -->
 <% end %>
 </div><!-- revisions_index -->

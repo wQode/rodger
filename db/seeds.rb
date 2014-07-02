@@ -5,25 +5,25 @@ Classification.destroy_all
 Tag.destroy_all
 
 
-u1 = User.create(:username => 'quma', :avatar => 'x', :password =>'password', :password =>'password')
-u2 = User.create(:username => 'whyte', :avatar => 'x', :password =>'password', :password =>'password', :is_admin => true)
-u3 = User.create(:username => 'rodgers', :avatar => 'x', :password =>'password', :password =>'password')
+u1 = User.create(:username => 'quma', :avatar => 'x', :password =>'123', :password =>'123')
+u2 = User.create(:username => 'whyte', :avatar => 'x', :password =>'123', :password =>'123', :is_admin => true)
+u3 = User.create(:username => 'rodgers', :avatar => 'x', :password =>'123', :password =>'123')
 
-d1 = Document.create(:title => 'Quma Document')
-d2 = Document.create(:title => 'Whyte Document')
-d3 = Document.create(:title => 'Rodgers Document')
+d1 = Document.create(:title => 'Boeing planes')
+d2 = Document.create(:title => 'Cats')
+d3 = Document.create(:title => 'Stars')
 
-r1 = Revision.create(:title => 'Quma Revision 1')
-r2 = Revision.create(:title => 'Whyte Revision 2')
-r3 = Revision.create(:title => 'Rodgers Revision 3')
+d1 = Document.append(:content => 'Boeing planes can fly really fast')
+d2 = Document.append(:content => 'Cats are furry little balls')
+d3 = Document.append(:content => 'Stars shine so bright')
 
-c1 = Classification.create(:title => 'Quma Document Title')
-c2 = Classification.create(:title => 'Whyte Document Title')
-c3 = Classification.create(:title => 'Rodgers Document Title')
+r1 = Revision.create(:title => 'Revision 1')
+r2 = Revision.create(:title => 'Revision 2')
+r3 = Revision.create(:title => 'Revision 3')
 
-t1 = Tag.create(:title => 'Quma Tag 1')
-t2 = Tag.create(:title => 'Whyte Tag 2')
-t3 = Tag.create(:title => 'Rodgers Tag 3')
+c1 = Classification.create(:title => 'Aviation')
+c2 = Classification.create(:title => 'Animals')
+c3 = Classification.create(:title => 'Astronomy')
 
 d1.revisions << r1
 d1.classification = c1

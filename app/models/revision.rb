@@ -2,11 +2,14 @@
 #
 # Table name: revisions
 #
-#  id          :integer          not null, primary key
-#  title       :string(255)
-#  created_at  :datetime
-#  updated_at  :datetime
-#  document_id :integer
+#  id                :integer          not null, primary key
+#  title             :string(255)
+#  created_at        :datetime
+#  updated_at        :datetime
+#  document_id       :integer
+#  content           :text
+#  classification_id :integer
+#  user_id           :integer
 #
 
 class Revision < ActiveRecord::Base

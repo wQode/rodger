@@ -8,6 +8,10 @@
 
 	<li><%= link_to('classifications', classifications_path) %></li>
 	<span class="navigationSpace"/>
+
+	<li><%= link_to('revisions', revisions_path) %></li>
+	<span class="navigationSpace"/>
+
 		<% if @current_user.try(:is_admin) %>
 			<li><%= link_to('view users', users_path) -%></li>
 		<% end %>

@@ -9,6 +9,7 @@ class DocumentsController < ApplicationController
 			@document = Document.new document_params
 			#Add document to current user  * has_and_belongs to many relationship
 			@document.users << @current_user
+			@document.creator = @current_user
 			@document.save
 	
 			redirect_to @document
@@ -20,30 +21,30 @@ class DocumentsController < ApplicationController
 
 	def edit
 		@document = Document.find params[:id]
+		@revision = Revision.new
 		# @revision = Revision.find params[:id]
 	end
 
 	def show
 		@document = Document.find params[:id]
 		@users = User.all
-		
-		@revision = Revision.find params[:id]
 	end
 
 	def update
 		document = Document.find params[:id]
-		revision = Revision.new
+		revision = Revision.new(document.attributes.slice('title', 'content', 'classification_id'))
 
 		revision.document_id = document.id
-		# revision.classification_id = document.classification_id
-		Revision.new(document.attributes.slice('title', 'content', 'classification_id'))
-		# revision.title = document.title
-		# revision.content = document.content
-		revision.save
-		flash[:notice] = 'One document revised and previous version stored'
-		
-		document.update document_params
-		redirect_to document
+		revision.user_id = @current_user.id
+
+		document.revisions << revision
+
+		if document.update document_params
+			flash[:notice] = 'One document revised and previous version stored'
+			redirect_to document
+		else
+			render :edit
+		end
 	end
 
 	def destroy

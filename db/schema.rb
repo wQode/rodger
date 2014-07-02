@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140701045416) do
     t.integer  "document_id"
     t.text     "content"
     t.integer  "classification_id"
+    t.integer  "user_id"
   end
 
   create_table "tags", force: true do |t|

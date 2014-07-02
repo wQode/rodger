@@ -3,17 +3,22 @@
 
 		<p>title: <%= @document.title if @document %></p>
 		<p>content: <%= @document.content if @document %></p>
-		<%# @users.each do |document| %>
 			<% @document.users.each do |user| %>
 	 			<p>user: <%= user.username if user %></p>
 			<% end %>
- 		<%# end %>
+			<ul>
+				<% @document.revisions.each do |revision| %>
+					<li><%= User.where(:id => revision.user_id).first.try(:username) %> - <%= link_to revision.id, revision_path(revision) %></li>
+				<% end %>
+			</ul>
 	</div>
 </div>
 
 	<div id="documents_show_menu">
-			<p> • <%= link_to('edit', edit_document_path(@document)) %> • </p>	
-			<p><%= link_to('remove', @document, :data => {:confirm => 'are you sure?', :method => :delete }) %> • </p>
+		<ul>
+		<li> • <%= link_to('edit', edit_document_path(@document)) %> • </li>	
+			<li><%= link_to('remove', @document, :data => {:confirm => 'are you sure?', :method => :delete }) %> • </li>
+		</ul>
 	</div><!-- documents_show_menu -->
 			
 
