@@ -4,8 +4,13 @@ class DocumentsController < ApplicationController
 
 		@revisions = Revision.all
 
-		search = params[:search]
-		@results = Document.where("title ILIKE :search", search: "%#{ search }%")
+		# search = params[:search]
+		# @results = Document.where("title ILIKE :search", search: "%#{ search }%")
+
+		# search_condition = "%" + search + "%"
+		# binding.pry
+  		@results = Document.where("title iLIKE ?", "%#{params[:search]}%")
+		# @results = Result.search params[:search]
 	end
 
 	def create
