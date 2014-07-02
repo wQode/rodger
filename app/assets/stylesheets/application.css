@@ -7,13 +7,15 @@
 	border: 2px solid;
 }
 .notice {
-	border: 1px dashed black;
-	background-color: white;
-	color:brown
+	/*border: 1px dashed black;*/
+/*	background-color: #5B5B5B;*/
+	color:#6E7B8B;
+	width: 30%;
+	margin: 0 auto;
 }
 #container {
 	/*max-width: 960px;*/
-	max-width:1100px;
+	max-width:960px;
 	margin: 80px auto;
 	display:block;
 	text-align: center;
@@ -26,10 +28,44 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	/*font-family: 'Bitter', serif;*/
 	/*font-family: 'Lato', sans-serif;*/
-	background-color: #9FB6CD;
+	background-color: #1E1E1E;
+	/*background-color: #FFFFFF;*/
+	/*background-color: #9FB6CD;*/
 	margin:0 auto;
 	text-align: center;
 }
+#login_form {
+	margin: 12px;
+	margin-top: 100px;
+}
+
+#login_form p {
+	margin-top:20px;
+}
+.form {
+	margin:25px auto;
+	border:0 solid;
+	border-spacing: 2px;
+	width: 240px;
+	padding:5px;
+	border-radius: 15px;
+	background-color: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+}
+#form {
+	margin-bottom:20px;
+}
+#form_button input, #searchform_button input {	
+	width: 120px;
+	height: 30px;
+	box-shadow: 1px 4px 4px #8B8B83;
+	margin-top: 30px;
+	/*display: inline;*/
+}
+#search_form {
+	display: inline;
+}
+
 #bottom_border {
 	font-family: 'Open Sans', sans-serif;
 	/*font-family: 'Bitter', serif;*/
@@ -58,7 +94,8 @@ body {
 	width: 100%;
 	display: block;
 	text-align: center;
-	padding: 15px;
+/*	padding: 15px;*/
+	margin: 0 auto;
 /*	margin-left: 350px;
 	margin-right: 350px;
 	margin-top: 10px;*/
@@ -87,28 +124,30 @@ body {
 	color: #6E7B8B;
 	background-color: transparent;
 	margin: 0 auto;
-	border-radius: 20px;
+	border-radius: 12px;
 	width: 420px;
 	height: 100px;
 	text-align: justify;
 	/*overflow:visible;	*/
 }
 #users_index_inner, #documents_index_inner {
+	 margin-top: 12px;
 	 display: inline-block;
-	 /*width: 30%;*/
+	 width: 25%;
+	 height: 50%;
 	 font-size: 10px;
 	 padding: 8px;
+	 border: 0.2px dashed white;
 }
 #users_index_inner, #documents_index_inner {
 	overflow: auto;
 }
-#users_index_inner p:last-child, #documents_index_inner p:last-child{
-/*	width: 10px;
-	overflow: hidden;*/
-/*	overflow:auto;*/
+/*#users_index_inner p:last-child, #documents_index_inner p:last-child{
+	width: 10px;
+	overflow: hidden;
+	overflow:auto;
 	text-overflow: ellipsis-word;
-
-}
+}*/
 #users_index_inner a, #documents_index_inner a:link, 
 #users_index_inner a, #documents_index_inner a:visited {
 	/*color:#EEEED1;*/
@@ -147,21 +186,9 @@ body {
 	text-align: center;
 	margin: 0 auto;
 }
-.form {
-	margin:25px auto;
-	border:0 solid;
-	border-spacing: 2px;
-	width: 240px;
-	padding:5px;
-	border-radius: 15px;
-	background-color: rgba(0, 0, 0, 0.6);
-	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
-}
+
 #classifications_show a{
 	font-size: 24px;
-}
-#form {
-	margin-bottom:20px;
 }
 #background {
 	background: url(rodger_mainpage.jpg) no-repeat center center fixed;
@@ -211,7 +238,7 @@ input {
 	color: #6E7B8B;
 	background-color: transparent;
 	margin: 0 auto;
-	border-radius: 20px;
+	border-radius: 12px;
 	width: 360px;
 	height: 18px;
 	text-align: center;
@@ -219,11 +246,12 @@ input {
 textarea {
         text-align: justify;
         white-space: normal;
+        border-radius: none;
 }
 h3, h4 {
 	text-decoration: underline;
 	font-size: 10px;
-	border: 0.2px solid white;
+	/*border: 0.2px solid white;*/
 }
 li {
 	list-style-type: none;

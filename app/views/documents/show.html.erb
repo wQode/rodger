@@ -1,8 +1,7 @@
 <div class="documents_show">
 	<div id="documents_show_notes">
-
 		<p>title: <%= @document.title if @document %></p>
-		<p>content: <%= @document.content if @document %></p>
+		<p>content: <%== Kramdown::Document.new(@document.content).to_html if @document %></p>
 			<% @document.users.each do |user| %>
 	 			<p>user: <%= user.username if user %></p>
 			<% end %>
@@ -14,13 +13,9 @@
 	</div>
 </div>
 
-	<div id="documents_show_menu">
+	<div id="documents_show_menu"> 
 		<ul>
 		<li> • <%= link_to('edit', edit_document_path(@document)) %> • </li>	
 			<li><%= link_to('remove', @document, :data => {:confirm => 'are you sure?', :method => :delete }) %> • </li>
 		</ul>
 	</div><!-- documents_show_menu -->
-			
-
-
-

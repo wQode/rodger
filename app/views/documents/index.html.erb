@@ -1,12 +1,31 @@
 <h2>Documents</h2>
+
+<div id="search_form">
+	<%= form_tag(searcher_path) do %>
+		<p>
+		<%= label_tag :search, 'Search' %>
+		<%= search_field_tag :search %>
+		</p>
+
+		<div id="searchform_button">
+			<%= submit_tag 'Submit' %>
+		</div>
+	<% end %>
+</div>
+
+<div id="search_results">
+	<% @results.each do |result| %>
+		<% result %>
+	<% end %>
+</div>
+
+
 <div class="documents_index">
 <% @documents.each do |document| %>
 	<div id="documents_index_inner">
 		<h3><%= link_to(document.title, document_path(document)) if document.title %></h3>
 		<p>of <%= link_to(document.classification.title, classification_path(document)) if document.classification %></p>	
 		<p> - <%= document.content if document.content %></p>	
-<!-- 		<p>revisions: <%#= link_to(document.revision, revision_path) if document.revision %></p>	 -->
-			
 	</div><!-- documents_index_inner -->
 <% end %>
 </div><!-- documents_index -->

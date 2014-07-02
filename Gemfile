@@ -28,6 +28,12 @@ gem 'spring',        group: :development
 
 gem 'haml'
 gem 'bcrypt-ruby'
+#gem 'redcarpet'
+gem 'kramdown'
+#gem 'albino'  
+#gem 'nokogiri'
+gem 'bootstrap-sass'
+#gem 'rack-pygmentize'
 
 group :development do
 	gem 'pry-rails'

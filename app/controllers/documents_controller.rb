@@ -3,6 +3,9 @@ class DocumentsController < ApplicationController
 		@documents = Document.all
 
 		@revisions = Revision.all
+
+		search = params[:search]
+		@results = Document.where("title ILIKE :search", search: "%#{ search }%")
 	end
 
 	def create

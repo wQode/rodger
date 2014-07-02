@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
+  
+  get '/searcher' => 'documents#index'
+  post '/searcher' => 'documents#index'
 end
 #              Prefix Verb   URI Pattern                         Controller#Action
 #                root GET    /                                   pages#homepage

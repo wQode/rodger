@@ -12,7 +12,7 @@
 #
 
 class Document < ActiveRecord::Base
-	belongs_to :creator, :class_name => 'user', :foreign_key => 'user_id'
+	belongs_to :creator, :class_name => 'User', :foreign_key => 'user_id'
 	has_and_belongs_to_many :users
 	belongs_to :classification
 	has_many :revisions
