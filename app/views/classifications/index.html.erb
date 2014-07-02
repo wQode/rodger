@@ -4,12 +4,10 @@
 </div>
 
 <div class="classifications_index">
-<p>And here is the list of all current classifications we list our documents under:-</p>
+And here is the list of all current classifications we list our documents under 
 	<div id="classifications_index_inner">
 	<% @classifications.each do |classification| %>
-		<ul>
-			<li><%= link_to(classification.title, classification_path(classification)) if classification.title %></li>	
-		</ul>
+			<%= link_to(classification.title, classification_path(classification)) if classification.title %>	
 	</div><!-- classifications_index_inner -->
 <% end %>
 </div><!-- classifications_index -->

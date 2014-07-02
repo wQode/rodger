@@ -2,21 +2,28 @@
 
 <div id="search_form">
 	<%= form_tag searcher_path, :action => 'search', :method => 'get' do %>
-		<p>
+	<ul>	
+		<li>
 			<%= text_field_tag :search, params[:search], :id => 'search_field' %>
-      	</p>
+      	</li>
       	
 		<div id="searchform_button">
-      		<%= submit_tag "Search", :name => nil %> 
+			<li>
+	      		<%= submit_tag "Search", :name => nil %> 
+	      	</li>
+      	</div>
+    </ul>
       		<%#= link_to "Clear", "$('search_field').clear()" %>
-  		</div>		
+  				
   <% end %>
 </div>
 	
 
 <div id="search_results">
     <% @results.each do |result| %>
-  	<%= link_to result.title, :action => 'show', :id => result.id  %>
+
+  		<%= link_to result.title, :action => 'show', :id => result.id  %>
+
   <% end %>
 </div>
 
