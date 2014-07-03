@@ -1,30 +1,24 @@
-<body id="documents_background">
+<!-- This is the document form template -->
+
 <div class="document_form">
 	<%= form_for @document do |f| %>
 		<p>
 			<%= f.label :title, "document title" %>
 			<%= f.text_field :title, :autocomplete => 'off', :placeholder => 'Document title is..', :autofocus => true %>
 		</p>
+		<p>
+			<%= f.label :classification_id, "classification" %>
+		</p>
+		<p>
+			<%= f.select :classification_id, Classification.all.map{ |classification| [classification.title, classification.id] }, :include_blank => true %>
+		</p>
+		<p>
+			<%= f.label :content, "document content" %>
+			<%= f.text_area :content, :placeholder => "Enter the document's content here .." %>
+		</p>
 
-		<div id="input_classification">
-			<p>
-				<%= f.label :classification_id, "classification" %>
-			</p>
-			<p>
-				<%= f.select :classification_id, Classification.all.map{ |classification| [classification.title, classification.id] }, :inlcude_blank => true %>
-			</p>
-		</div>
-
-		<div id="input_content">
-			<p>
-				<%= f.label :content, "document content" %>
-				<%= f.text_area :content, :placeholder => "Enter the document's content here .." %>
-			</p>
-		</div>
-	
-	<div id="form_button">
+	<div id="document_form_button">
 		<%= f.submit 'Submit' %>
 	</div>
 	<% end %>
 </div>
-</body>

@@ -1,6 +1,8 @@
+<!-- This displays all revisions -->
+
 <h2>Revisions</h2>
 <div class="revisions_index">
-<p>every single once of them ever made, just so you can laugh your head off</p>
+<p>every single one of them ever made - just so you can laugh your head off</p>
 <% @revisions.each do |revision| %>
 	<div id="revisions_index_inner">
 		<%= link_to(revision.title || '', revision) if revision %>

@@ -6,7 +6,6 @@ class DocumentsController < ApplicationController
 
 		# search = params[:search]
 		# @results = Document.where("title ILIKE :search", search: "%#{ search }%")
-
 		# search_condition = "%" + search + "%"
 		# binding.pry
   		@results = Document.where("title iLIKE ?", "%#{params[:search]}%")
@@ -19,7 +18,8 @@ class DocumentsController < ApplicationController
 			@document.users << @current_user
 			@document.creator = @current_user
 			@document.save
-	
+			
+			flash[:notice] = "New document created."
 			redirect_to @document
 	end
 

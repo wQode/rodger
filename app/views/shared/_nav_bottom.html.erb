@@ -1,3 +1,5 @@
+<!-- This is the logout out navigator -->
+
 <ul>
 	<% if @current_user %>
 		<li><%= link_to('Logout ' + @current_user.username, login_path, :data => {:method => :delete, :confirm => 'Really logout?'}) %></li>

@@ -1,5 +1,5 @@
 class RevisionsController < ApplicationController
-def index
+	def index
 		@revisions = Revision.all
 	end
 
@@ -14,6 +14,7 @@ def index
 		revision = Revision.find params[:id]
 		revision.destroy
 		
+		flash[:notice] = "Revision is now destroyed."
 		redirect_to documents_path
 	end
 

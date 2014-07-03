@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 	# before_action :check_if_logged_in, :except => [:new, :create]
 	# before_action :check_if_admin, :only => [:index]
 	layout "homepage"
+	
 	def index
 		@users = User.all
 	end
@@ -9,6 +10,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new user_params
 		if @user.save
+			flash[:notice] = "Welcome to rodger.Please sign in."
 			redirect_to root_path
 		else
 			render :new
@@ -30,12 +32,18 @@ class UsersController < ApplicationController
 	def update
 		user = User.find params[:id]
 		user.update user_params
+
+		flash[:notice] = "User updated."
+
 		redirect_to user
 	end
 	
 	def destroy
 		user = User.find params[:id]
 		user.destroy
+
+		flash[:notice] = "User is now destroyed."
+		
 		redirect_to root_path
 	end
 

@@ -1,4 +1,6 @@
-<div id="login_form">
+<!-- This is the login form template -->
+
+<div class="login_form">
 <%= form_tag '/login' do %>
 	<p>
 	<%= label_tag 'username' %>
@@ -9,7 +11,7 @@
 	<%= password_field_tag 'password' %>
 	</p>
 
-	<div id="login_button">
+	<div id="login_form_button">
 		<%= submit_tag 'Login' %>
 	</div>
 <% end %>

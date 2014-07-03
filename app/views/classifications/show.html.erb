@@ -1,23 +1,22 @@
-<div id="classifications_show">
-	
-		<p>Did you want to <%= link_to('edit', edit_classification_path(@classification)) %> or <%= link_to('remove', @classification, :data => {:confirm => 'are you sure?', :method => :delete }) %> the classification of <%= @classification.title %>?</p>
+<!-- Displays the individual classification and also,
+ the related documents existing under those classifications -->
+ 
+<div class="classifications_show">
+	<p>Did you want to <%= link_to('edit', edit_classification_path(@classification)) %> 
+	   or 
+	   <%= link_to('remove', @classification, :data => {:confirm => 'are you sure?', :method => :delete }) %> 
+	   the classification of
+	   <%= @classification.title %>?</p>
 </div>
-
 
 <div id="classifications_show_documents">
 	<p>
-		We currently have 
+		We currently have --
 		<% @classification.documents.each do |document| %>
-		<%= link_to(document.title, document) %>
+			<%= link_to(document.title, document) %>,
 		<% end %>
 		listed under 
 		<%= @classification.title %>.
 	</p>
-		
-
-<!-- 	<span><%#= link_to('Edit', edit_classification_path(@classification)) %></span>
-	<span><%#= link_to('Delete', @classification, :method => :delete,
-	:confirm => 'Are you sure you want to delete this classification?',
-	:class => '#') %></span> -->
 </div>
 

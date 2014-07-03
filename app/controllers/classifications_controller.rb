@@ -6,6 +6,9 @@ class ClassificationsController < ApplicationController
 	def create
 		classification = Classification.new classification_params
 		classification.save
+
+		flash[:notice] = "New classification has been created."
+		
 		redirect_to classifications_path
 	end
 
@@ -24,12 +27,18 @@ class ClassificationsController < ApplicationController
 	def update
 		classification = Classification.find params[:id]
 		classification.update classification_params
+
+		flash[:notice] = "Classification is now updated."
+
 		redirect_to classifications_path
 	end
 
 	def destroy
 		classification = Classification.find params[:id]
 		classification.destroy
+
+		flash[:notice] = "Classification is now destroyed."
+
 		redirect_to classifications_path
 	end
 

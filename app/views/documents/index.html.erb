@@ -1,32 +1,27 @@
-<h2>Documents</h2>
+<!-- This displays an index of all existing documents and also has a search feature for document titles -->
 
-<div id="search_form">
+<h2>Documents</h2>
+<div class="search_form">
 	<%= form_tag searcher_path, :action => 'search', :method => 'get' do %>
 	<ul>	
 		<li>
 			<%= text_field_tag :search, params[:search], :id => 'search_field' %>
       	</li>
       	
-		<div id="searchform_button">
+		<div id="search_form_button">
 			<li>
 	      		<%= submit_tag "Search", :name => nil %> 
 	      	</li>
       	</div>
-    </ul>
-      		<%#= link_to "Clear", "$('search_field').clear()" %>
-  				
+    </ul>  				
   <% end %>
 </div>
 	
-
-<div id="search_results">
+<div class="search_results">
     <% @results.each do |result| %>
-
   		<%= link_to result.title, :action => 'show', :id => result.id  %>
-
   <% end %>
 </div>
-
 
 <div class="documents_index">
 <% @documents.each do |document| %>

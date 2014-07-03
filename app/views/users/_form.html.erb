@@ -1,4 +1,6 @@
-<div class="users_form">
+<!-- This is the user sign up form template -->
+
+<div class="user_signup_form">
 <%= form_for @user do |f| %>
 	<p>
 		<%= f.label :username %>
@@ -17,7 +19,7 @@
 		<%= f.password_field :password_confirmation %>
 	</p>
 
-	<div id="loginform_button">
+	<div id="user_signup_form_button">
 		<%= f.submit 'Submit' %>
 	</div>
 <% end %>

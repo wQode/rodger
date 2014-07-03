@@ -1,3 +1,5 @@
+<!-- This is the main application html. -->
+
 <!DOCTYPE html>
 <html>
 
@@ -9,15 +11,15 @@
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 </head>
-<div id="top_border">
+<div class="top_border">
 	<nav id="homepage_login_nav">
 		<%= render :partial => "/shared/nav_top"  %>
 		<%= render :partial => "/shared/nav"  %>
 	</nav>
 </div>
 
-<body id="application_background">
-	<div id="container">
+<body class="application_background">
+	<div class="container">
 		<% if flash[:notice].present? %>
 			<div class="notice">
 				<%= flash[:notice]%>
@@ -29,7 +31,7 @@
 	</div><!-- container -->
 </body>
 
-<div id="bottom_border">
+<div class="bottom_border">
 	<div id="homepage_logout_nav">	
 		<nav>
 		<%= render :partial => "/shared/nav_bottom"  %>

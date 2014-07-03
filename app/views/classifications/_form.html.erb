@@ -1,10 +1,12 @@
+<!-- This is the classification form template -->
+
 <div class="classification_form">
 	<%= form_for @classification do |f| %>
 		<p>
 			<%= f.label :title, "classification title" %>
 			<%= f.text_field :title, :autocomplete => 'off', :placeholder => 'Classification name is..', :autofocus => true %>
 		</p>
-	<div id="form_button">
+	<div id="classification_form_button">
 		<%= f.submit 'Save' %>
 	</div>
 	<% end %>
