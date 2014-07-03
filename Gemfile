@@ -30,10 +30,13 @@ gem 'haml'
 gem 'bcrypt-ruby'
 #gem 'redcarpet'
 gem 'kramdown'
+
 #gem 'albino'  
 #gem 'nokogiri'
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
 #gem 'rack-pygmentize'
+
+gem 'rails_12factor', group: :production
 
 group :development do
 	gem 'pry-rails'
