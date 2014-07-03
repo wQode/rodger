@@ -8,7 +8,10 @@
   <%= csrf_meta_tags %>
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lusitana|Arbutus+Slab|Ovo|Tienne|Bentham|Rufina|Corben|Artifika' rel='stylesheet' type='text/css'>
 </head>
+<!-- <div class="homepage_top"> -->
 <div id="top_border_homepage">
 	<nav id="homepage_login_nav">
 		<%= render :partial => "/shared/nav_top"  %>
@@ -16,7 +19,18 @@
 	</nav>
 </div>
 
-<body id="application_background">
+<div>
+	<h1 id="rodger_logo">rodger<span style="font-size: 122px !important; color: orange;">.</span></h1>
+</div>
+
+<!-- </div> -->
+
+<!-- 
+<div id="rodger_logo">
+	<img src="/assets/rodger_logo.jpg" alt="">
+</div> -->
+
+<body id="background_homepage">
 	<div id="container">
 		<% if flash[:notice].present? %>
 			<div class="notice">

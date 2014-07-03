@@ -5,10 +5,16 @@
 			<%= f.label :title, "document title" %>
 			<%= f.text_field :title, :autocomplete => 'off', :placeholder => 'Document title is..', :autofocus => true %>
 		</p>
-		<p>
-		<%= f.label :classification_id, "classification" %>
-		<%= f.select :classification_id, Classification.all.map{ |classification| [classification.title, classification.id] }, :inlcude_blank => true %>
-		</p>
+
+		<div id="input_classification">
+			<p>
+				<%= f.label :classification_id, "classification" %>
+			</p>
+			<p>
+				<%= f.select :classification_id, Classification.all.map{ |classification| [classification.title, classification.id] }, :inlcude_blank => true %>
+			</p>
+		</div>
+
 		<div id="input_content">
 			<p>
 				<%= f.label :content, "document content" %>

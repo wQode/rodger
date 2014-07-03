@@ -1,13 +1,12 @@
 <h2>Classifications</h2>
 <div class="classifications_menu">
 	<p>This is where you can create <%= link_to('new classifications', new_classification_path) %>.</p>	
-</div>
 
 
-And here is the list of all current classifications we list our documents under 
-	
 	<div id="classifications_index">
+	And here is the list of all current classifications we list our documents under <br>
 	<% @classifications.each do |classification| %>
-			<%= link_to(classification.title, classification_path(classification)) if classification.title %>	
-	</div><!-- classifications_index -->
+			<%= link_to(classification.title, classification_path(classification)) if classification.title %>
 <% end %>
+	</div><!-- classifications_index -->
+</div>
