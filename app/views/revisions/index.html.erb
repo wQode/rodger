@@ -3,7 +3,7 @@
 <p>every single once of them ever made, just so you can laugh your head off</p>
 <% @revisions.each do |revision| %>
 	<div id="revisions_index_inner">
-		title: <%= link_to(revision.title || '', revision) if revision %>
+		<%= link_to(revision.title || '', revision) if revision %>
 	</div><!-- revisions_index_inner -->
 <% end %>
 </div><!-- revisions_index -->

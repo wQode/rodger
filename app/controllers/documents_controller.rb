@@ -48,7 +48,7 @@ class DocumentsController < ApplicationController
 		document.revisions << revision
 
 		if document.update document_params
-			flash[:notice] = 'One document revised and previous version stored'
+			flash[:notice] = '** One document revised and previous version stored **'
 			redirect_to document
 		else
 			render :edit

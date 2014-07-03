@@ -6,32 +6,30 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 </head>
-<div id="top_border">
+<div id="top_border_homepage">
 	<nav id="homepage_login_nav">
 		<%= render :partial => "/shared/nav_top"  %>
 		<%= render :partial => "/shared/nav"  %>
 	</nav>
 </div>
 
-<body id="background">
+<body id="application_background">
 	<div id="container">
-
 		<% if flash[:notice].present? %>
 			<div class="notice">
 				<%= flash[:notice]%>
 			</div> 
 		<% end %>
-		
+
 		<%= yield %>
 
 	</div><!-- container -->
 </body>
 
-<div id="bottom_border">
+<div id="bottom_border_homepage">
 	<div id="homepage_logout_nav">	
 		<nav>
 		<%= render :partial => "/shared/nav_bottom"  %>
