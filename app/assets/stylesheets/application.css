@@ -65,13 +65,13 @@
 	/*left: 550px;*/
 	/*top: 100px;*/
 	/*margin-left: 100px;*/
-	margin: 20px 0 0 20px;
+	margin: -75px 0px -41px 955px;
 	color: white;
 	/*text-align: center;*/
 /*	font-family: 'Crimson Text', serif;*/
 /*	font-family: 'Ovo', serif;*/
 	font-family: 'Tienne', serif;
-	font-size: 122px;
+	font-size: 74px;
 	/*display: inline-block;*/
 }
 @media all and (max-width: 600px) {
@@ -314,14 +314,16 @@ span.navigationSpace {
 	/*display:inline;*/
 }
 /********** Show Form Headers **********/
-.users_index, .documents_index, .documents_show, .users_show {
+.documents_index, .documents_show, .classifications_menu {
 	margin-top: 12px;
 	display: block;
 	text-align: center;
 	/*background: #737373;*/
 	border: 2px solid;
 	border-radius: 20px;
-	background-color: transparent;
+	background-color: rgba(255, 255, 224, 0.3);
+	/*background-color: rgba(255, 250, 205, 0.3);*/
+	/*background-color: rgba(100, 100, 100, 0.3);*/
 	/*background-color: rgba(200, 200, 200, 0.5);*/
 	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
 /*	background-image: url(lionsepia.jpg);
@@ -331,7 +333,24 @@ span.navigationSpace {
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg',     sizingMethod='scale');
     -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg', sizingMethod='scale'); */
-
+}
+.users_index, .users_show {
+	margin-top: 12px;
+	display: block;
+	text-align: center;
+	/*background: #737373;*/
+	border: 2px solid;
+	border-radius: 20px;
+	background-color: rgba(100, 100, 100, 0.3);
+	/*background-color: rgba(200, 200, 200, 0.5);*/
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7F00FF00', EndColorStr='#7F00FF00');
+/*	background-image: url(lionsepia.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/wallpaper.jpg', sizingMethod='scale'); */
 }
 /********** Login Forms **********/
 .login_form {
@@ -368,7 +387,8 @@ span.navigationSpace {
 	color:#383838;
 	font-weight: 900;
 	font-size: 18px;
-    text-shadow: #FFD700 1px 0px 2px;
+    text-shadow: #FFFFE0 1px 0px 2px;
+    /*text-shadow: #FFD700 1px 0px 2px;*/
     -webkit-font-smoothing: antialiased;
     height: auto;
 }
@@ -398,7 +418,7 @@ span.navigationSpace {
 	/*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(255, 255, 255, 0.5) inset;*/
 	background-color: #777;
 	margin-top: 30px;
-	color:white;
+	color:#FFFfe0;
 	text-transform: uppercase; 
 	/*display: inline;*/
 	 text-shadow: orange 0px 0px 2px;
@@ -476,6 +496,10 @@ span.navigationSpace {
 	/*opacity: 0.8;*/
 	box-shadow: none;
 }
+.documents_index p:last-child, 
+.documents_show p:last-child {
+	text-align: justify;
+}
 #documents_index_inner {
 	 margin-top: 12px;
 	 display: inline-block;
@@ -504,9 +528,10 @@ span.navigationSpace {
 #users_index_inner, #documents_index_inner {
 	overflow: auto;
 }
-.documents_index p:last-child, 
-.documents_show p:last-child {
-	text-align: justify;
+.users_show {
+	padding: 9px;
+	margin: 0 auto;	
+	background-color: rgba(100, 100, 100, 0.3);
 }
 .users_show a:link, .users_show a:visited {
 	/*color:#EEEED1;*/
@@ -532,9 +557,6 @@ span.navigationSpace {
 	text-align: center;
 	display:inline-block;
 }
-.users_show {
-	padding: 9px;	
-}
 #users_index_inner a {
 	/*color:#EEE9E9;*/
 	color:white;
@@ -558,7 +580,9 @@ span.navigationSpace {
 #users_index_inner a:hover {
 	/*color:#FFF8DC;*/
 	/*color:#171717;*/
-	color:#EEEED1;
+	/*color:#EEEED1;*/
+	/*color: #FFF68F*/
+	color: orange;
 	text-decoration: none;
 	font-size: 12px;
 	border-radius: 15px;
