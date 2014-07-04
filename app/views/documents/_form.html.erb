@@ -10,7 +10,7 @@
 			<%= f.label :classification_id, "classification" %>
 		</p>
 		<p>
-			<%= f.select :classification_id, Classification.all.map{ |classification| [classification.title, classification.id] }, :include_blank => true %>
+			<%= f.select :classification_id, Classification.all.map{ |classification| [classification.title, classification.id] }.sort, :include_blank => true %>
 		</p>
 		<p>
 			<%= f.label :content, "document content" %>
