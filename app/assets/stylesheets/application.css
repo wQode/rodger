@@ -78,6 +78,9 @@
   #rodger_logo{
   	font-size: 70px;
   }
+/*  .main_container, body {
+  	width: 50% ;
+  }*/
 }
 /********** Headers **********/
 h1{
@@ -262,7 +265,7 @@ span.navigationSpace {
 .bottom_border_homepage {
 	text-align: center;
 	left: 0; right: 0; bottom: 0;
-	/*height: 45px;*/
+	height: 0;
 	position: fixed;
 	color:black;
 }
@@ -511,7 +514,23 @@ span.navigationSpace {
 	 /*background-image: url(metalbackground.jpg);*/
 	 /*background-image: url(greylights.jpg);*/
 	 overflow:hidden;
+	 border-radius: 12px;
+	 /**/
 }
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 #users_index_inner {
 	 margin-top: 12px;
 	 display: inline-block;
