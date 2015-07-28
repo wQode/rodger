@@ -59,9 +59,12 @@ class DocumentsController < ApplicationController
 		document = Document.find params[:id]
 		document.destroy
 
-		revision = Revision.find params[:id]
-		revision.destroy
-		
+		document.revisions.each do |revision|
+			revision.destroy
+		end
+
+		# revision = Revision.find params[:id]
+		# revision.destroy
 		redirect_to documents_path
 	end
 

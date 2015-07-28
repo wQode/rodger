@@ -25,7 +25,7 @@ development:
   <<: *default
   database: rodger_development
   host: localhost
-  username: WQ_MBP
+  username: WQU
   password:
 
 test:

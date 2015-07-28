@@ -22,7 +22,8 @@
 	border-radius: 12px;
 	display: center;
 	background-color: #4D4D4D;
-	color:#383838;
+	/*color:#383838;*/
+	color: black;
 	font-weight: 900;
 	font-size: 18px;
     text-shadow: #FFD700 1px 0px 2px;

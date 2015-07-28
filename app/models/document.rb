@@ -2,13 +2,13 @@
 #
 # Table name: documents
 #
-#  id                :integer          not null, primary key
-#  title             :string(255)
-#  content           :text
-#  created_at        :datetime
-#  updated_at        :datetime
-#  user_id           :integer
-#  classification_id :integer
+#  id         :integer          not null, primary key
+#  title      :string(255)
+#  content    :text
+#  user_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  pagenumber :integer
 #
 
 class Document < ActiveRecord::Base
